@@ -1,0 +1,38 @@
+def oddeven(a):
+  if a%2==0:
+    return a
+  else:
+     print("a is odd")
+oddeven(9)
+def ars(*names):
+  print("the name is"+ names[2])
+ars("sambu","farooq","hashim")
+def func(child1,child2,child3):
+     print("the youngest child is"+child3)
+func(child1= "sambu",child2= "farooq",child3="hashim")
+
+def myfunc(**kid):
+   print("his fname is:" + kid["fname"])
+myfunc(fname = "sambu",lname = "s")
+def averagemarks(*marks):
+  if len(marks)==0:
+    return 0
+  return sum(marks) / len(marks)
+print(averagemarks(80,40,30,40))
+#write a function employeedetails that accepts any no of keyword arguments
+#representing employee info and prints each key value pairs and total details 
+
+def employeedetails(**details):
+  for key,value in details.items():
+    print(f"{key}:{value}")
+  print(f"total details provided:{len(details)}")
+employeedetails(name = "sambu",age = 23,dept = "cse",salary = 25000)
+     
+    
+   def find_max(numbers):
+   return max(numbers)
+find_max([20,30,50,60])
+   
+def reverse_string(s):
+    return s[::-1]
+print(reverse_string("sam"))
