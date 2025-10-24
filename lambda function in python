@@ -1,0 +1,30 @@
+x = lambda a : a+10
+print(x(5))
+x = lambda a : a * 10 - a
+print(x(6))
+x = lambda a,b : a * b
+print(x(5,6))
+# multiple argumnets
+x = lambda a,b,c : a*b+c
+print(x(5,6,8))
+# using function
+def myfunc(n):
+  return lambda a : a*n
+b = myfunc(2)
+print(b(4))
+# oddeven using lambda
+c = lambda x : "even" if x%2==0 else "odd"
+num = int(input("enter a num:"))
+print("the no is ",c(num))
+#map function
+
+nlength = list(map(len,["mary","isla","sam"]))
+print("map function output:",nlength)
+#reduce func.
+from functools import reduce
+total = reduce(lambda a, x:a+x,[0,1,2,3,4])
+print("reduce func output",total)
+#filter function
+a = [1,2,3,4,5,6]
+f = list(filter(lambda x:x>4,a))
+print("filter func output",f)
